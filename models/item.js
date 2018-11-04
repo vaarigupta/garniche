@@ -8,7 +8,7 @@ var item = mongoose.model('List',{
 		minlength : 1,
 		trim : true
 	},
-	item_type :{
+	itemType :{
 		type : String,
 		default : "food"
 
