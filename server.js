@@ -2,11 +2,12 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var {item} = require('./models/item');
 var {mongoose} = require('./db/mongoose');
+var {ObjectID} = require('mongodb');
 
 var app = express();
 var port = process.env.PORT || 3000;
-app.get('/apis',(req,res)=>{
-	res.send("<h1> APis </h1>")
+app.get('/',(req,res)=>{
+	res.send("<h1> Garniche </h1>")
 })
 app.use(bodyParser.json());
 
@@ -36,7 +37,27 @@ app.get('/items',(req,res)=>{
 })
 
 
+app.get('/items/:id',(req,res)=>{
+	var id = req.params.id;
+	if(ObjectID.isValid(id))
+	{
+		item.findById(id).then((item)=>{
+			if(!item)
+			{
+				return res.send(404 , "Item not found with given ID");
+			}
+			res.send(200,`My Item : ${item}`);
 
+		} )
+	}
+
+	else
+	{
+		res.send(404 , "Invalid ID");
+	}
+
+
+})
 app.listen(port , ()=>{
 	console.log("Running on port 3000")
 })

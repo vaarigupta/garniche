@@ -15,8 +15,8 @@ var item = mongoose.model('List',{
 	},
 	price : {
 		type : Number,
-		default : 50  
-
+		default : 50,
+		required : true
 	}
 })
 
