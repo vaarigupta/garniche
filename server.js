@@ -5,11 +5,12 @@ var {mongoose} = require('./db/mongoose');
 var {ObjectID} = require('mongodb');
 
 var app = express();
+app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
 	res.send("<h1> Garniche </h1>")
 })
-app.use(bodyParser.json());
+
 
 app.post('/items',(req , res)=>{
 	var body = req.body;
