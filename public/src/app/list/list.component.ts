@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from '../item';
 import {ItemList} from '../item-list';
-import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -9,18 +9,14 @@ import {Http} from "@angular/http";
 })
 export class ListComponent implements OnInit {
    item = ItemList;
-  
-  constructor(private http: Http) {
+
+  constructor(private http: HttpClient) {
     }
 
-    ngOnInit(): void {
-        this.http.get("../data.json")
-            .subscribe((data)=> {
-                console.log(data)
-            });
-    }
+    ngOnInit() {
+        let obs = this.http.get("https://hidden-taiga-53783.herokuapp.com/items");
+            obs.subscribe((data)=> console.log(data))
 
-    }
+          }
 
-}
-
+        }
