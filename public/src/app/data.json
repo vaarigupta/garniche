@@ -1,0 +1,49 @@
+[
+
+	{
+		 "itemType": "fast Food",
+	   " price": 100,
+	    "text": "pizza",
+	},
+	{
+		"itemType": "italian Food",
+	    "price": 90,
+	   " text": "pasta",
+	  },
+    {
+    "itemType": "South Indian Food",
+    "price": 90,
+    "text": "Dosa",
+    },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   },
+   {
+    "itemType": "North Indian Food",
+    "price": 200,
+    "text": "Roti -Makhani Dal",
+   }
+   
+]

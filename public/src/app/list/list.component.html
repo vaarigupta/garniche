@@ -1,0 +1,53 @@
+<table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>
+        <th style="width: 20%">
+            <mfDefaultSorter by="itemtype">Item Type</mfDefaultSorter>
+        </th>
+        <th style="width: 50%">
+            <mfDefaultSorter by="text">text</mfDefaultSorter>
+        </th>
+        <th style="width: 10%">
+            <mfDefaultSorter by="price">price</mfDefaultSorter>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+        <td>{{item.itemtype}}</td>
+        <td>{{item.text}}</td>
+        <td>{{item.price}}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<!-- <h4> {{item.itemType | uppercase }}</h4>
+<div>{{item.text}}</div>
+<div>Price : {{item.price}}</div> -->
+
+<!-- 
+<ul class="item">
+  <li *ngFor = "let i of item">
+    <span>{{i.itemType}} - {{i.text}} - Rs{{i.price}}</span>
+  </li>
+
+</ul> -->
+
+<!-- <table style="width:100%" class="item">
+  <tr *ngFor = "let i of item">
+   <td>{{i.itemType}} - {{i.text}} - Rs{{i.price}}</td>
+   </tr>
+ </table> -->
+
+<!-- 
+ <table >
+  <tr>
+    <th *ngFor="let col of columns"> {{col}}</th>
+  </tr>
+  <tr *ngFor="let r of rows">
+    <td *ngFor="let col of columns"> {{r[col]}}</td>
+  </tr>
+</table> -->
+

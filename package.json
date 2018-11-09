@@ -2,14 +2,20 @@
   "name": "garniche",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node server.js"
+  },
+  "engine" :
+  {
+    "node" : "10.6.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vaarigupta/garniche.git"
   },
+
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -20,6 +26,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongodb": "^3.1.8",
-    "mongoose": "^5.3.9"
+    "mongoose": "^5.3.9",
+    "morgan": "^1.9.1"
   }
 }

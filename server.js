@@ -1,11 +1,39 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+//const logger = require('morgan');
 var {item} = require('./models/item');
 var {mongoose} = require('./db/mongoose');
 var {ObjectID} = require('mongodb');
 
 var app = express();
 app.use(bodyParser.json());
+
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header(
+//     'Access-Control-Allow-Headers',
+//     'Origin, X-Requested-With, Content-Type, Accept'
+//   );
+//   if (req.method === 'Options') {
+//     res.header('Access-Control-Allow-Methods', 'PUT, POST, DELETE');
+//     return res.status(200).json({});
+//   }
+// });
+//app.use(logger('dev'));
+// app.use((req, res, next) => {
+//   const err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
+// app.use((err, req, res, next) => {
+//   res.status(err.status || 500);
+//   res.json({
+//     error: {
+//       message: err.message
+//     }
+//   });
+// });
+
 var port = process.env.PORT || 3000;
 app.get('/',(req,res)=>{
 	res.send("<h1> Garniche </h1>")
@@ -31,7 +59,7 @@ app.post('/items',(req , res)=>{
 
 app.get('/items',(req,res)=>{
 	item.find().then((items)=>{
-		res.send({items})
+		res.send(items)
 	},(e)=>{
 		res.status(400).send(e);
 	})
