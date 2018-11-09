@@ -1,9 +1,0 @@
-list.component.ts
-
-import {ItemlistService} from '../itemlist.service.ts';
-
- private atService: ItemlistService
- rows = Observable<any[]>;
-   columns =  string[];
- this.columns = this.atService.getColumns();
-  this.rows = this.atService.getrows(); 
