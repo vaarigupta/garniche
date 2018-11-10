@@ -1,14 +1,6 @@
 
-
-<!-- <ul class="item">
-  <li *ngFor = "let i of item">
-    <span>{{i.itemType}} - {{i.text}} - Rs{{i.price}}</span>
-  </li>
-
-</ul> -->
-
 <div class="mat-elevation-z8 data-table">
-  <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+  <table  mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="itemType">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Item Type</th>

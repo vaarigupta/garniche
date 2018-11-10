@@ -5,3 +5,29 @@
   width:80%;
   margin:20px auto;
 }
+
+th
+{
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  color:white;
+}
+td{
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+}
+
+table{
+  background-color: #EC7A7B;
+}
+
+mat-paginator{
+  background-color: #73D0EE;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+
+}
