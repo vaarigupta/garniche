@@ -1,5 +1,5 @@
 export class Item {
-	text : String;
 	itemType : String;
+	text : String;
 	price : number;
 	}
